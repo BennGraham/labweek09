@@ -1,38 +1,107 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.title-container {
+    color: black;
+    padding: 0.5rem;
+}
+
+.title-container div:nth-child(1) {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.title-container div:nth-child(2) {
+    font-size: 2rem;
+}
+
+.student-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    width: 300px;
+    margin: 16px;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        scale 0.3s ease-in-out;
+}
+
+.student-card:hover {
+    transform: translateY(-2px);
+    scale: 1.05;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.student-card div {
+    margin-bottom: 8px;
+}
+
+.student-card div:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 12px;
+}
+
+.student-card a {
+    text-decoration: none;
+}
+
+.student-card:hover div:nth-child(1) {
+    text-decoration: underline;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.student-card div:nth-child(2) {
+    font-size: 1rem;
+    color: lightgray;
+    padding: 6px 12px;
+    background-color: black;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.student-card div:nth-child(3) {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-top: 8px;
 }
